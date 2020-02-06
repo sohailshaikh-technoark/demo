@@ -5,5 +5,5 @@
 
 FROM openjdk:latest
 ARG JAR_FILE=target/*.jar
-COPY target/ app.jar
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
